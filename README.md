@@ -1,3 +1,17 @@
+# webpack HMR 동작을 알아보기 위한 레포지토리
+
+### 동작방식 유추
+1. watch로 특정 폴더의 파일을 감시한다.
+2. 파일 변경 or or dev-server가 켜질 경우 컴파일을 실행한다.
+3. 컴파일과정
+    1. loader로 파일을 읽고 record를 생성한다.
+    2. recode를 이용하여 종속성을 찾고 모듈 인스턴스를 만든다.
+    3. 캐시한다?
+    4. 파일을 변경한다?
+4. 변경된 파일만 변경하는데.리플레이스할때 dom을 호출할려나? 아마 리로드는 못할듯하다.
+
+
+
 <div align="center">
   <a href="https://github.com/webpack/webpack">
     <img width="200" height="200" src="https://webpack.js.org/assets/icon-square-big.svg">
